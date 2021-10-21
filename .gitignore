@@ -1,0 +1,75 @@
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/admin/backend/node_modules
+/admin/backend/.pnp
+/admin/backend/.pnp.js
+
+/node_modules
+# testing
+/admin/backend/coverage
+
+# production
+/admin/backend/build
+
+# misc
+/admin/backend/.DS_Store
+/admin/backend/.env
+/admin/backend/.env.development.local
+/admin/backend/.env.test.local
+/admin/backend/.env.production.local
+
+/admin/backend/npm-debug.log*
+/admin/backend/yarn-debug.log*
+/admin/backend/yarn-error.log*
+
+#vscode
+/admin/backend/.vscode
+.vscode
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/admin/portal/node_modules
+/admin/portal/.pnp
+/admin/portal/.pnp.js
+
+# testing
+/admin/portal/coverage
+
+# production
+/admin/portal/build
+
+# misc
+/admin/portal/.DS_Store
+/admin/portal/.env.local
+/admin/portal/.env.development.local
+/admin/portal/.env.test.local
+/admin/portal/.env.production.local
+
+/admin/portal/npm-debug.log*
+/admin/portal/yarn-debug.log*
+/admin/portal/yarn-error.log*
+
+# dependencies
+/client/node_modules
+/client/.pnp
+/client/.pnp.js
+
+# testing
+/client/coverage
+
+# production
+/client/build
+
+# misc
+/client/.DS_Store
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
+
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
