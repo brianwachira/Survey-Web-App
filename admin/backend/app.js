@@ -6,6 +6,7 @@ require('express-async-errors');
 const cors = require('cors');
 const adminRouter = require('./controllers/Admin.controller');
 const loginRouter = require('./controllers/Login.Controller');
+const surveyRouter = require('./controllers/Survey.controller');
 const middleware = require('./utils/middleware');
 const logger = require('./utils/logger');
 
@@ -26,6 +27,7 @@ app.use(middleware.requestLogger);
 
 app.use('/api/admin', adminRouter);
 app.use('/api/auth', loginRouter);
+app.use('/api/survey', surveyRouter);
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
