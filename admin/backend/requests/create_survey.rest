@@ -1,0 +1,63 @@
+POST http://localhost:3002/api/survey
+content-type: application/json
+Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIjoiNjE3MTZmOGExOWY2ZmQwZTcxYzY3MzExIiwiaWF0IjoxNjM0ODMzNzA3fQ.3Utuus-GC56OQK0CoxcQK08PE7qG78Xxf5QJ2i8wk1g
+
+{
+    "admin":"61716f8a19f6fd0e71c67311",
+    "title": "1st Survey To Test",
+    "questions": [
+        {
+            "passage": "What do you like?",
+            "options":[
+                {
+                    "choice": "A",
+                    "value": "Meat"
+                },
+                {
+                    "choice": "B",
+                    "value": "Vegetables"
+                }
+            ]
+        },
+        {
+            "passage": "What do you like even more?",
+            "options":[
+                {
+                    "choice": "A",
+                    "value": "Fish"
+                },
+                {
+                    "choice": "B",
+                    "value": "Chicken"
+                }
+            ]
+        },
+        {
+            "passage": "What would you like it to go with?",
+            "options":[
+                {
+                    "choice": "A",
+                    "value": "Rice"
+                },
+                {
+                    "choice": "B",
+                    "value": "Chapati"
+                }
+            ]
+        },
+        {
+            "passage": "Soft drink?",
+            "options":[
+                {
+                    "choice": "A",
+                    "value": "Martinis"
+                },
+                {
+                    "choice": "B",
+                    "value": "Water"
+                }
+            ]
+        }
+    ]
+
+}
