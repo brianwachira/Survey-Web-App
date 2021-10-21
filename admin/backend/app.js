@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const app = express();
 require('express-async-errors');
 const cors = require('cors');
+const adminRouter = require('./controllers/Admin.controller');
+const loginRouter = require('./controllers/Login.Controller');
 const middleware = require('./utils/middleware');
 const logger = require('./utils/logger');
 
@@ -21,6 +23,9 @@ app.use(cors());
 app.use(express.static('build'));
 app.use(express.json());
 app.use(middleware.requestLogger);
+
+app.use('/api/admin', adminRouter);
+app.use('/api/auth', loginRouter);
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
