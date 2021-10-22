@@ -105,4 +105,32 @@ submissionsRouter.get('/:id', async ( request, response ) => {
 	});
 });
 
+//get submissions by phone number
+submissionsRouter.get('/phone/:phone', async ( request, response ) => {
+	const token = getTokenFrom(request);
+	//verify token exists
+	// eslint-disable-next-line no-undef
+	const decodedToken = jwt.verify(token, process.env.SECRET);
+
+	// throw an error if token is not found or doesn't reconcile
+	if (!token || !decodedToken.username) {
+		return response.status(401).json({ error: 'token missing or invalid' });
+	}
+
+	//fetch submissions and responses
+	const submissons = await Submissions.find({ phone: request.params.phone }).populate('survey', { _id: 1, title: 1 });
+
+	//fetch Questions and create an array with response info and questions
+	const submissionWithResponses = await Promise.all(
+		submissons.map( async submission => {
+			let response = await Responses.find({ submission : submission._id }).populate('response.question',{ id:1, passage:1, options: 1 });
+			return {
+				submission,
+				response
+			};
+		})
+	);
+	response.json(submissionWithResponses);
+});
+
 module.exports = submissionsRouter;
