@@ -9,6 +9,7 @@ const loginRouter = require('./controllers/Login.Controller');
 const surveyRouter = require('./controllers/Survey.controller');
 const qAndARouter = require('./controllers/QandA.controller');
 const submissionsRouter = require('./controllers/Submissions.controller');
+const responseRouter = require('./controllers/Responses.contoller');
 const middleware = require('./utils/middleware');
 const logger = require('./utils/logger');
 
@@ -32,6 +33,7 @@ app.use('/api/auth', loginRouter);
 app.use('/api/survey', surveyRouter);
 app.use('/api/qandas', qAndARouter);
 app.use('/api/submissions', submissionsRouter);
+app.use('/api/responses', responseRouter);
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
 
