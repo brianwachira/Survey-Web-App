@@ -21,7 +21,7 @@ qAndARouter.get('/all', async (request, response) => {
 		return response.status(401).json({ error: 'token missing or invalid' });
 	}
 	// fetch questionAndAnswers
-	const questionAndAnswers = await QandA.find({});
+	const questionAndAnswers = await QandA.find({}).populate('survey',{ id:1, title: 1 });
 
 	return response.json(questionAndAnswers);
 });
@@ -38,7 +38,7 @@ qAndARouter.get('/:id', async (request, response) => {
 	}
 
 	//fetch the qandA by id
-	const foundQAndA = await QandA.findById(request.params.id);
+	const foundQAndA = await QandA.findById(request.params.id).populate('survey',{ id:1, title: 1 });
 
 	return response.json(foundQAndA);
 });

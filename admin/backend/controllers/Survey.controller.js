@@ -57,7 +57,27 @@ surveyRouter.post('/', async (request, response) => {
 	response.json(fullSurvey);
 });
 
+// public route
 surveyRouter.get('/all', async (request, response) => {
+	//fetch surveys
+	const surveys = await Survey.find({});
+
+	//fetch Questions and create an array with survey info and questions
+	const surveyWithQuestions = await Promise.all(
+		surveys.map(async survey => {
+			let questions = await QandA.find({ survey: survey._id });
+			return {
+				survey,
+				questions
+			};
+		})
+	);
+	response.json(surveyWithQuestions);
+
+});
+
+//protected route for admins only
+surveyRouter.get('/protected/all', async (request, response) => {
 	const token = getTokenFrom(request);
 	//verify token exists
 	// eslint-disable-next-line no-undef
@@ -82,6 +102,36 @@ surveyRouter.get('/all', async (request, response) => {
 	);
 	response.json(surveyWithQuestions);
 
+});
+
+//get survey by id
+surveyRouter.get('/:id', async (request, response) => {
+	//fetch surveys
+	const survey = await Survey.findById(request.params.id);
+	//fetch q/a too
+	const qandA = await QandA.find({ survey: survey._id });
+
+	response.json({
+		survey,
+		qandA
+	});
+});
+
+//get surveys by adminID
+surveyRouter.get('/admin/:id', async (request, response) => {
+	//fetch surveys
+	const surveys = await Survey.findById({ admin: request.params.id });
+	//fetch Questions and create an array with survey info and questions
+	const surveyWithQuestions = await Promise.all(
+		surveys.map(async survey => {
+			let questions = await QandA.find({ survey: survey._id });
+			return {
+				survey,
+				questions
+			};
+		})
+	);
+	response.json(surveyWithQuestions);
 });
 
 surveyRouter.delete('/:id', async (request, response) => {
