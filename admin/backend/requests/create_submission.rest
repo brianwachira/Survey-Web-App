@@ -1,0 +1,29 @@
+POST http://localhost:3002/api/submissions
+content-type: application/json
+Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIjoiNjE3MTZmOGExOWY2ZmQwZTcxYzY3MzExIiwiaWF0IjoxNjM0ODMzNzA3fQ.3Utuus-GC56OQK0CoxcQK08PE7qG78Xxf5QJ2i8wk1g
+
+{
+"firstName" : "Brian",
+"lastName" : "Wachira",
+"email" : "brianwachira7@gmail.com",
+"phone" : "0707234567",
+"surveyId": "6171d9f6356db0b69915f55f",
+"response": [
+        {
+            "question": "6171d9f6356db0b69915f563",
+            "choice": "A"
+        },
+        {
+            "question": "6171d9f6356db0b69915f566",
+            "choice": "B"
+        },
+        {
+            "question": "6171d9f6356db0b69915f569",
+            "choice": "A"
+        },
+        {
+            "question": "6171d9f6356db0b69915f56c",
+            "choice": "A"
+        }
+    ]
+}
