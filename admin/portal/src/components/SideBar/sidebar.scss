@@ -1,0 +1,7 @@
+.nav-custom{
+    height: 75vh !important;
+
+    @media (max-width: 575.98px) {
+        height: inherit !important;
+    }
+}
