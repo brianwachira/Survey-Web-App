@@ -1,0 +1,13 @@
+@import "../../index.scss";
+
+.modal-custom{
+
+    border-bottom-right-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+}
+
+i{
+    &:hover{
+        color: $color-secondary;
+    }
+}

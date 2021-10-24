@@ -109,11 +109,11 @@ surveyRouter.get('/:id', async (request, response) => {
 	//fetch surveys
 	const survey = await Survey.findById(request.params.id);
 	//fetch q/a too
-	const qandA = await QandA.find({ survey: survey._id });
+	const questions = await QandA.find({ survey: survey._id });
 
 	response.json({
 		survey,
-		qandA
+		questions
 	});
 });
 

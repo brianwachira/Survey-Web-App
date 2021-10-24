@@ -9,8 +9,8 @@ const NavBar = () => {
 		<>
 			<nav className="navbar navbar-expand-lg navbar-light bg-light">
 				<div className="container-fluid">
-					<NavLink to='/'  className="navbar-brand">
-						<button type="button" className="btn btn-outline-dark disabled">Add Survey <i className="fa fa-plus" aria-hidden="true"></i></button>
+					<NavLink to='/survey/add'  className="navbar-brand">
+						<button type="button" className="btn  btn-outline-dark">Add Survey <i className="fa fa-plus" aria-hidden="true"></i></button>
 					</NavLink>
 					<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span>
