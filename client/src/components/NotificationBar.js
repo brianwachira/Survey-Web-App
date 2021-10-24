@@ -26,12 +26,7 @@ const NotificationBar = () => {
 				<div className="container">
 					<div className="d-flex justify-content-around">
 						<p className="mb-0">&#10004; {state.notification.message}</p>
-						<img
-							src={'/assets/icons/close.png'}
-							width={25}
-							height={25}
-							alt=""
-							onClick={() => handleClose()}/>
+						<i className="fa fa-times-circle fa-2x" aria-hidden="true" onClick={() => handleClose()}></i>
 					</div>
 				</div>
 			</section>

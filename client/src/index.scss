@@ -26,3 +26,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.notification-bar{
+  background: #212121;
+  color: white;
+  position: fixed;
+  top:0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000;
+  padding: 1rem;
+}

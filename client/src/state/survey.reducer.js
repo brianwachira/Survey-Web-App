@@ -1,7 +1,8 @@
 import surveyService from '../services/surveys'
 const initialState = {
 	surveys: [],
-	survey: {}
+	survey: {},
+	submitted:[]
 }
 const surveyReducer = (state =initialState, action) => {
 	switch (action.type) {
@@ -14,6 +15,12 @@ const surveyReducer = (state =initialState, action) => {
 		return {
 			...state,
 			survey: action.data
+		}
+	case 'SUBMIT_RESPONSE':
+		return {
+			...state,
+			submitted: [...state.submitted, action.data]
+
 		}
 	default:
 		return state
@@ -39,6 +46,17 @@ export const getSurvey = (id) => {
 		dispatch({
 			type: 'SET_SURVEY',
 			data: survey
+		})
+	}
+}
+
+export const submitResponse = response => {
+	return async dispatch => {
+		const submittedResponse = await surveyService.submit(response)
+
+		dispatch({
+			type: 'SUBMIT_RESPONSE',
+			data: submittedResponse
 		})
 	}
 }
