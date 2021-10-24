@@ -1,24 +1,31 @@
 import React from 'react'
-import { useContext } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { setNotification } from '../state/notification.reducer'
-import { GlobalContext } from '../state/provider'
 
 const NotificationBar = () => {
-	const { notification, dispatchNotification } = useContext(GlobalContext)
 
-	if(!notification) {
+	const dispatch = useDispatch()
+
+	const state = useSelector(state => state)
+
+	if (!state.notification.message) {
 		return null
 	}
 
 	const handleClose = () => {
-		dispatchNotification(setNotification(''))
+		const newNotification = {
+			...state.notification,
+			title: '',
+			message: ''
+		}
+		dispatch(setNotification(newNotification))
 	}
 	return (
 		<>
 			<section className={'notification-bar'}>
 				<div className="container">
 					<div className="d-flex justify-content-around">
-						<p className="mb-0">&#10004; {notification}</p>
+						<p className="mb-0">&#10004; {state.notification.message}</p>
 						<img
 							src={'/assets/icons/close.png'}
 							width={25}

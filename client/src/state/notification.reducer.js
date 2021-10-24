@@ -1,4 +1,9 @@
-export const notificationReducer = (state = '', action) => {
+const initialState = {
+	hasError:false,
+	title: '',
+	message: ''
+}
+const notificationReducer = (state = initialState, action) => {
 	switch(action.type) {
 	case 'SET_NOTIFICATION':
 		state = action.data
@@ -15,4 +20,5 @@ export const setNotification = notification => {
 		data: notification
 	}
 }
+export default notificationReducer
 
