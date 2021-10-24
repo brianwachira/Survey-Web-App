@@ -1,0 +1,19 @@
+@import '../../index.scss';
+
+.nav-link{
+    color: $color-black-custom;
+    border-color: $color-black-custom;
+}
+.nav-link.active{
+    color: white !important;
+    background-color: $color-primary-rgba;
+
+    button{
+        color: white !important;
+    }
+
+}
+.w-custom{
+    width: 100% !important;
+}
+

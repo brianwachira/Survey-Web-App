@@ -3,8 +3,12 @@ import React from 'react'
 import LoginForm from '../../../components/LogInForm'
 import * as Yup from 'yup'
 import loginService from '../../../services/login'
+import { useDispatch } from 'react-redux'
+import { setNotification } from '../../../state/notification.reducer'
 
 const Login = () => {
+
+	const dispatch = useDispatch()
 	const initialValues = {
 		username: '',
 		password: '',
@@ -25,13 +29,36 @@ const Login = () => {
 			window.localStorage.setItem(
 				'user', JSON.stringify(response)
 			)
-			alert('login Successful! Redirecting...')
+			//create a notification
+			const successNotification = {
+				hasError: false,
+				title: 'Log In Success!',
+				message: 'Log in successful'
+			}
+			//set notification
+			dispatch(setNotification(successNotification))
+			//unset notification upon success
+			setTimeout(() => {
+				dispatch(setNotification({ ...successNotification,title:'', message: '' }))
+			}, 2000)
+			//refresh page
 			setTimeout(() => {
 				window.location.href = `${window.location.protocol}//${window.location.host}`
 			}, 1000)
 
 		} catch (error) {
-			alert(error.response.data.error)
+			//create a notification
+			const failedNotification = {
+				hasError: true,
+				title: 'Log In Failed!',
+				message: `Log In Failed! ${error?.response?.data?.error}`
+			}
+			//set notification
+			dispatch(setNotification(failedNotification))
+			// //unset notification upon success
+			setTimeout(() => {
+				dispatch(setNotification({ ...failedNotification,title:'', message: '' }))
+			}, 2000)
 		}
 	}
 	return (

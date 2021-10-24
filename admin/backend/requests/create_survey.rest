@@ -4,57 +4,57 @@ Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJy
 
 {
     "admin":"61716f8a19f6fd0e71c67311",
-    "title": "1st Survey To Test",
+    "title": "Another  Survey",
     "questions": [
         {
-            "passage": "What do you like?",
+            "passage": "What do you dislike?",
             "options":[
                 {
                     "choice": "A",
-                    "value": "Meat"
+                    "value": "Waking up early"
                 },
                 {
                     "choice": "B",
-                    "value": "Vegetables"
+                    "value": "Sleeping late"
                 }
             ]
         },
         {
-            "passage": "What do you like even more?",
+            "passage": "Squares or circles?",
             "options":[
                 {
                     "choice": "A",
-                    "value": "Fish"
+                    "value": "square"
                 },
                 {
                     "choice": "B",
-                    "value": "Chicken"
+                    "value": "circles"
                 }
             ]
         },
         {
-            "passage": "What would you like it to go with?",
+            "passage": "Black or white?",
             "options":[
                 {
                     "choice": "A",
-                    "value": "Rice"
+                    "value": "Black"
                 },
                 {
                     "choice": "B",
-                    "value": "Chapati"
+                    "value": "White"
                 }
             ]
         },
         {
-            "passage": "Soft drink?",
+            "passage": "BMW or Mercedes?",
             "options":[
                 {
                     "choice": "A",
-                    "value": "Martinis"
+                    "value": "BMW"
                 },
                 {
                     "choice": "B",
-                    "value": "Water"
+                    "value": "Mercedes"
                 }
             ]
         }
