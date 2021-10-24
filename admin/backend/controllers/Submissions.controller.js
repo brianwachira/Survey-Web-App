@@ -16,16 +16,6 @@ const getTokenFrom = (request) => {
 
 submissionsRouter.post('/', async (request, response) => {
 	const body = request.body;
-	const token = getTokenFrom(request);
-	//verify token exists
-	// eslint-disable-next-line no-undef
-	const decodedToken = jwt.verify(token, process.env.SECRET);
-
-	// throw an error if token is not found or doesn't reconcile
-	if (!token || !decodedToken.username) {
-		return response.status(401).json({ error: 'token missing or invalid' });
-	}
-
 	//Create a new Submissions object
 	const submission = new Submission({
 		firstname: body.firstName,
