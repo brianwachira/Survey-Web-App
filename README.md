@@ -25,7 +25,7 @@ Content-Type: application/json
 
 }
 ```
-### response
+#### response
 ```
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCIfIkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIjoiNjE3MTZmOGExOWY2ZmQwfTcxYzY3MzExIiwiaWF0IjoxNjM1MTUzNDUxfQ.5jbe5DTlPihkULocV7wVGZiTP4zMYwTDWNhTBz7A8Qc",
@@ -38,7 +38,7 @@ Content-Type: application/json
 ```
 POST /survey
 ```
-### Example
+#### Example
 ```
 POST http://localhost:3002/api/survey
 content-type: application/json
@@ -104,7 +104,7 @@ Authorization:  bearer eyJhbIUzI1NifIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud
 
 }
 ```
-### response
+#### response
 ```
 {
   "title": "urvey for readme demo",
@@ -261,7 +261,186 @@ Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJy
   }
 }
 ```
-
+### Get submissions by survey id
+```
+POST submissions
+```
+#### Example
+```
+GET http://localhost:3002/api/submissions/survey/6171d9f6356db0b69915f55f
+content-type: application/json
+Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIjoiNjE3MTZmOGExOWY2ZmQwZTcxYzY3MzExIiwiaWF0IjoxNjM0ODMzNzA3fQ.3Utuus-GC56OQK0CoxcQK08Pxf5QJ2i8wk1g
+```
+#### Response
+```
+[
+  {
+    "submission": {
+      "_id": "61729f8137eee5aa283da876",
+      "firstname": "Brian",
+      "lastname": "Wachira",
+      "email": "brianwachira7@gmail.com",
+      "phone": "0707234567",
+      "survey": "6171d9f6356db0b69915f55f",
+      "__v": 0
+    },
+    "response": [
+      {
+        "question": "6171d9f6356db0b69915f563",
+        "choice": "A",
+        "_id": "61729f8237eee5aa283da87a"
+      },
+      {
+        "question": "6171d9f6356db0b69915f566",
+        "choice": "B",
+        "_id": "61729f8237eee5aa283da87b"
+      },
+      {
+        "question": "6171d9f6356db0b69915f569",
+        "choice": "A",
+        "_id": "61729f8237eee5aa283da87c"
+      },
+      {
+        "question": "6171d9f6356db0b69915f56c",
+        "choice": "A",
+        "_id": "61729f8237eee5aa283da87d"
+      }
+    ]
+  },
+  {
+    "submission": {
+      "_id": "61758e683db914830fe5b5a8",
+      "firstname": "Ryan",
+      "lastname": "John",
+      "email": "erenyaegar@aot.rumblin",
+      "phone": "0738942048",
+      "survey": "6171d9f6356db0b69915f55f",
+      "__v": 0
+    },
+    "response": [
+      {
+        "question": "6171d9f6356db0b69915f563",
+        "choice": "B",
+        "_id": "61758e693db914830fe5b5ac"
+      },
+      {
+        "question": "6171d9f6356db0b69915f566",
+        "choice": "A",
+        "_id": "61758e693db914830fe5b5ad"
+      },
+      {
+        "question": "6171d9f6356db0b69915f569",
+        "choice": "B",
+        "_id": "61758e693db914830fe5b5ae"
+      },
+      {
+        "question": "6171d9f6356db0b69915f56c",
+        "choice": "A",
+        "_id": "61758e693db914830fe5b5af"
+      }
+    ]
+  },
+  {
+    "submission": {
+      "_id": "61758ee63db914830fe5b5b1",
+      "firstname": "Ryan",
+      "lastname": "John",
+      "email": "erenyaegar@aot.rumblin",
+      "phone": "0738942048",
+      "survey": "6171d9f6356db0b69915f55f",
+      "__v": 0
+    },
+    "response": [
+      {
+        "question": "6171d9f6356db0b69915f563",
+        "choice": "B",
+        "_id": "61758ee63db914830fe5b5b5"
+      },
+      {
+        "question": "6171d9f6356db0b69915f566",
+        "choice": "A",
+        "_id": "61758ee63db914830fe5b5b6"
+      },
+      {
+        "question": "6171d9f6356db0b69915f569",
+        "choice": "B",
+        "_id": "61758ee63db914830fe5b5b7"
+      },
+      {
+        "question": "6171d9f6356db0b69915f56c",
+        "choice": "A",
+        "_id": "61758ee63db914830fe5b5b8"
+      }
+    ]
+  },
+  {
+    "submission": {
+      "_id": "617651087977d3b4e6c9f4d6",
+      "firstname": "boruto",
+      "lastname": "John",
+      "email": "b@s.com",
+      "phone": "0783975920",
+      "survey": "6171d9f6356db0b69915f55f",
+      "__v": 0
+    },
+    "response": [
+      {
+        "question": "6171d9f6356db0b69915f563",
+        "choice": "B",
+        "_id": "617651087977d3b4e6c9f4da"
+      },
+      {
+        "question": "6171d9f6356db0b69915f566",
+        "choice": "A",
+        "_id": "617651087977d3b4e6c9f4db"
+      },
+      {
+        "question": "6171d9f6356db0b69915f569",
+        "choice": "B",
+        "_id": "617651087977d3b4e6c9f4dc"
+      },
+      {
+        "question": "6171d9f6356db0b69915f56c",
+        "choice": "A",
+        "_id": "617651087977d3b4e6c9f4dd"
+      }
+    ]
+  },
+  {
+    "submission": {
+      "_id": "617677e32961596b393fff03",
+      "firstname": "random",
+      "lastname": "guyy",
+      "email": "randomguyy@gmail.com",
+      "phone": "0707234562",
+      "survey": "6171d9f6356db0b69915f55f",
+      "__v": 0
+    },
+    "response": [
+      {
+        "question": "6171d9f6356db0b69915f563",
+        "choice": "A",
+        "_id": "617677e32961596b393fff07"
+      },
+      {
+        "question": "6171d9f6356db0b69915f566",
+        "choice": "B",
+        "_id": "617677e32961596b393fff08"
+      },
+      {
+        "question": "6171d9f6356db0b69915f569",
+        "choice": "A",
+        "_id": "617677e32961596b393fff09"
+      },
+      {
+        "question": "6171d9f6356db0b69915f56c",
+        "choice": "A",
+        "_id": "617677e32961596b393fff0a"
+      }
+    ]
+  }
+]
+```
 ## Technologies used (frontend)
  - <b>ReactJS (Create React App) </b> : Allows one to Create React apps with no build configuration. [https://create-react-app.dev/](https://create-react-app.dev/)
  - <b>axios</b> : Promise based HTTP client for the browser and node.js [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
