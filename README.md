@@ -4,8 +4,13 @@
 ## Description
 - This is a test to build the backend API, web portal and client site for a survey web app
 
+
 ## Live Demo
 [BACKEND PORTAL](https://secret-plateau-48735.herokuapp.com/)<br/>
+```
+username: admin 
+password:admin
+```
 [CLIENT SITE](https://survey-app25.herokuapp.com/)
 
 ## Prerequites
@@ -17,11 +22,11 @@
 ## Example Endpoints
 ### login
 ```
-POST /login
+POST /auth
 ```
 #### Example
 ```
-POST http://localhost:3002/api/login 
+POST http://localhost:3002/api/auth 
 Content-Type: application/json
 
 {
@@ -37,7 +42,7 @@ Content-Type: application/json
   "id": "61716f8a19f6fd0e71c67311"
 }
 ```
-- You can a comprehensive documentation [here](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend) 
+- You can find a comprehensive documentation [here](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend) 
 ## Technologies used (frontend)
  - <b>ReactJS (Create React App) </b> : Allows one to Create React apps with no build configuration. [https://create-react-app.dev/](https://create-react-app.dev/)
  - <b>axios</b> : Promise based HTTP client for the browser and node.js [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
