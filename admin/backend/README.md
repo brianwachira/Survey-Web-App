@@ -10,9 +10,9 @@
   - [Install](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#install)
   - [Usage](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#usage)
 - [Example Endpoints](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#example-endpoints)
-  - [Create account](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-account)
-  - [Login](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#login)
-  - [Create Survey](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-survey)
+  - [Create admin account](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-account)
+  - [Account authentication (login)](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#login)
+  - [Create survey](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-survey)
   - [Get surveys (public)](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-surveys-public)
   - [Get surveys (protected)](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-surveys-protected)
   - [Get survey by id](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-survey-by-id)
@@ -21,7 +21,7 @@
   - [Get all q/a](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-all-qa)
   - [Get all q/a by id](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-qa-by-id)
   - [Get all q/a by survey id](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-qa-by-survey-id)
-  - [Create Submission (fill survey)](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-submission--fill-survey-)
+  - [Create submission (fill survey)](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-submission--fill-survey-)
   - [Get survey submissions by survey id](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-submissions-by-survey-id)
   - [Get survey submissions by phone number](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-submissions-by-phone-number)
   - [Get survey responses](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-responses)
@@ -554,82 +554,7 @@ Access-Control-Allow-Origin: *
 Date: Mon, 25 Oct 2021 20:22:04 GMT
 Connection: close
 ```
-### create submission ( fill survey )
-```
-POST /submissions
-```
-#### Example
-```
-POST http://localhost:3002/api/submissions
-Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIoxcQK08PE7qG7sdXxf5QJ2i8wk1g
 
-{
-"firstName" : "random",
-"lastName" : "guyy",
-"email" : "randomguyy@gmail.com",
-"phone" : "0707234562",
-"surveyId": "6171d9f6356db0b69915f55f",
-"response": [
-        {
-            "question": "6171d9f6356db0b69915f563",
-            "choice": "A"
-        },
-        {
-            "question": "6171d9f6356db0b69915f566",
-            "choice": "B"
-        },
-        {
-            "question": "6171d9f6356db0b69915f569",
-            "choice": "A"
-        },
-        {
-            "question": "6171d9f6356db0b69915f56c",
-            "choice": "A"
-        }
-    ]
-}
-```
-#### response
-```
-{
-  "savedSubmission": {
-    "firstname": "random",
-    "lastname": "guyy",
-    "email": "randomguyy@gmail.com",
-    "phone": "0707234562",
-    "survey": "6171d9f6356db0b69915f55f",
-    "_id": "617677e32961596b393fff03",
-    "__v": 0
-  },
-  "savedResponse": {
-    "submission": "617677e32961596b393fff03",
-    "response": [
-      {
-        "question": "6171d9f6356db0b69915f563",
-        "choice": "A",
-        "_id": "617677e32961596b393fff07"
-      },
-      {
-        "question": "6171d9f6356db0b69915f566",
-        "choice": "B",
-        "_id": "617677e32961596b393fff08"
-      },
-      {
-        "question": "6171d9f6356db0b69915f569",
-        "choice": "A",
-        "_id": "617677e32961596b393fff09"
-      },
-      {
-        "question": "6171d9f6356db0b69915f56c",
-        "choice": "A",
-        "_id": "617677e32961596b393fff0a"
-      }
-    ],
-    "_id": "617677e32961596b393fff06",
-    "__v": 0
-  }
-}
-```
 ### Get all q/a
 ```
 GET qandas/all
@@ -749,6 +674,82 @@ Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJy
     "title": "1st Survey To Test"
   },
   "__v": 0
+}
+```
+### create submission ( fill survey )
+```
+POST /submissions
+```
+#### Example
+```
+POST http://localhost:3002/api/submissions
+Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIoxcQK08PE7qG7sdXxf5QJ2i8wk1g
+
+{
+"firstName" : "random",
+"lastName" : "guyy",
+"email" : "randomguyy@gmail.com",
+"phone" : "0707234562",
+"surveyId": "6171d9f6356db0b69915f55f",
+"response": [
+        {
+            "question": "6171d9f6356db0b69915f563",
+            "choice": "A"
+        },
+        {
+            "question": "6171d9f6356db0b69915f566",
+            "choice": "B"
+        },
+        {
+            "question": "6171d9f6356db0b69915f569",
+            "choice": "A"
+        },
+        {
+            "question": "6171d9f6356db0b69915f56c",
+            "choice": "A"
+        }
+    ]
+}
+```
+#### response
+```
+{
+  "savedSubmission": {
+    "firstname": "random",
+    "lastname": "guyy",
+    "email": "randomguyy@gmail.com",
+    "phone": "0707234562",
+    "survey": "6171d9f6356db0b69915f55f",
+    "_id": "617677e32961596b393fff03",
+    "__v": 0
+  },
+  "savedResponse": {
+    "submission": "617677e32961596b393fff03",
+    "response": [
+      {
+        "question": "6171d9f6356db0b69915f563",
+        "choice": "A",
+        "_id": "617677e32961596b393fff07"
+      },
+      {
+        "question": "6171d9f6356db0b69915f566",
+        "choice": "B",
+        "_id": "617677e32961596b393fff08"
+      },
+      {
+        "question": "6171d9f6356db0b69915f569",
+        "choice": "A",
+        "_id": "617677e32961596b393fff09"
+      },
+      {
+        "question": "6171d9f6356db0b69915f56c",
+        "choice": "A",
+        "_id": "617677e32961596b393fff0a"
+      }
+    ],
+    "_id": "617677e32961596b393fff06",
+    "__v": 0
+  }
 }
 ```
 ### Get submissions by survey id
