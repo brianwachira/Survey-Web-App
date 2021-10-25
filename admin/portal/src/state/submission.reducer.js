@@ -18,6 +18,16 @@ const submissionsReducer = ( state = initialState, action ) => {
 			...state,
 			submissionsBySurvey: action.data
 		}
+	case 'FILTER_SUBMISSIONS':
+		return {
+			...state,
+			filteredSubmissions: state.submissionsBySurvey.filter(submission => submission.submission.firstname.toLowerCase().includes(action.data.toLowerCase()) ||  submission.submission.lastname.toLowerCase().includes(action.data.toLowerCase()))
+		}
+	case 'SET_SUBMISSION':
+		return {
+			...state,
+			submission: action.data
+		}
 	default:
 		return state
 	}
@@ -43,5 +53,23 @@ export const getSubmissionsBySurvey = (id) => {
 	}
 }
 
+export const getSubmissionById = (id) => {
+	return async dispatch => {
+		const submission = await submissionsService.getBy(id)
+		dispatch({
+			type: 'SET_SUBMISSION',
+			data: submission
+		})
+	}
+}
+
+export const filterSubmissions = ( name ) => {
+	return dispatch => {
+		dispatch({
+			type: 'FILTER_SUBMISSIONS',
+			data: name
+		})
+	}
+}
 
 export default submissionsReducer

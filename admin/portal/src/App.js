@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { BrowserRouter, Switch, Redirect, Route } from 'react-router-dom'
 import NotificationBar from './components/NotificationBar'
+import Submission from './components/Submission'
 import Login from './pages/auth/login/login'
 import Home from './pages/Home'
 import AddSurvey from './pages/Surveys/addSurvey'
@@ -33,6 +34,9 @@ const App = () => {
 		<BrowserRouter>
 			<NotificationBar/>
 			<Switch>
+				<Route path="/submission/:id">
+					{!isLoggedIn ? <Redirect to="/"/> : <Submission/> }
+				</Route>
 				<Route path="/auth/login">
 					{isLoggedIn ? <Redirect to="/" /> : <Login/>}
 				</Route>

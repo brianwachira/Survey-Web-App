@@ -14,23 +14,8 @@ const SideBar = () => {
 				</NavLink>
 				<ul className="nav nav-custom nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between justify-content-sm-center w-100 px-2 align-items-center">
 					<li className="nav-item">
-						<NavLink to="/comingsoon" className="nav-link py-3 px-2" title="Clinics" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+						<NavLink to="/" className="nav-link py-3 px-2" title="Clinics" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
 							<i className="fa fa-hospital-o h2 icon-sidebars" aria-hidden="true"></i><br/><small>ANALYTICS</small>
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to="/analytics" className="nav-link py-3 px-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Analytics">
-							<i className="fa fa-line-chart h2 icon-sidebars" aria-hidden="true"></i>
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to="/comingsoon" className="nav-link py-3 px-2" title="Settings" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Settings">
-							<i className="fa fa-cogs h2 icon-sidebars" aria-hidden="true"></i>
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to="/comingsoon" className="nav-link py-3 px-2" title="Conversations" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Conversations">
-							<i className="fa fa-commenting-o h2 icon-sidebars" aria-hidden="true"></i>
 						</NavLink>
 					</li>
 				</ul>
@@ -39,9 +24,6 @@ const SideBar = () => {
 						<i className="fa fa-user h2 icon-sidebars" aria-hidden="true"></i>
 					</NavLink>
 					<ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-						<li><Link className="dropdown-item" to="#">New project...</Link></li>
-						<li><Link className="dropdown-item" to="#">Settings</Link></li>
-						<li><Link className="dropdown-item" to="#">Profile</Link></li>
 						<li><Link className="dropdown-item" to="#"><div onClick={() => logout()}>Sign out</div></Link></li>
 					</ul>
 				</div>

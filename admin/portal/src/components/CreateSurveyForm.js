@@ -72,6 +72,7 @@ const CreateSurveyForm = ({ handleSubmit }) => {
 				}}>
 				{({ values }) => (
 					<Form>
+						<h5 className='mb-4'>Fill in the form below with the questions and options you prefer :)</h5>
 						<div className="row g-3 align-items-center mb-5">
 							<div className="col-2">
 								<label htmlFor={'title'} className="form-label"> Survey Title</label>
