@@ -1,6 +1,14 @@
 # Survey Web App Backend
 #### By [Brian Wachira](https://www.github.com/brianwachira)
 
+## Table Of Contents
+- [Description](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#description)
+- [Demo Links](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#live-demo)
+- [Example Endpoints](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#example-endpoints)
+  - [Create Survey](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-survey)
+  - [Create Submission (fill survey)](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-submission--fill-survey-)
+  - [Get submission by survey id](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-submissions-by-survey-id)
+  
 ## Description
 - This is the backend API for the Survey Web App
 
@@ -8,8 +16,6 @@
 [BACKEND PORTAL](https://secret-plateau-48735.herokuapp.com/)<br/>
 [CLIENT SITE](https://survey-app25.herokuapp.com/)
 
-## Table Of Contents
-[Example Endpoints](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#example-endpoints)
 
 ## Example Endpoints
 ### create survey
