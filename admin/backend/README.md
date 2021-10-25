@@ -15,7 +15,11 @@
 
 ## Live Demo
 [BACKEND PORTAL](https://secret-plateau-48735.herokuapp.com/)<br/>
-[CLIENT SITE](https://survey-app25.herokuapp.com/)
+```
+username: admin 
+password:admin
+```
+[CLIENT SITE](https://survey-app25.herokuapp.com/) 
 
 
 ## Example Endpoints
