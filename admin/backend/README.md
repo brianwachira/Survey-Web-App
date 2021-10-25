@@ -9,6 +9,7 @@
 [CLIENT SITE](https://survey-app25.herokuapp.com/)
 
 
+## Example Endpoints
 ### create survey
 ```
 POST /survey
