@@ -1,6 +1,18 @@
 # Survey Web App
 #### By [Brian Wachira](https://www.github.com/brianwachira)
 
+
+## Table Of Contents
+- [Description](https://github.com/brianwachira/Survey-Web-App#description)
+- [Demo Links](https://github.com/brianwachira/Survey-Web-App#live-demo)
+- [Prerequisites](https://github.com/brianwachira/Survey-Web-App#prerequites)
+- [Backend API](https://github.com/brianwachira/Survey-Web-App#backend-api)
+  - [Example Endpoints](https://github.com/brianwachira/Survey-Web-App#example-endpoints)
+- [Technologies used (frontend)](https://github.com/brianwachira/Survey-Web-App#technologies-used-frontend)
+  - [Folder structure](https://github.com/brianwachira/Survey-Web-App#folder-structure)
+- [Technologies used (backend)](https://github.com/brianwachira/Survey-Web-App#technologies-used-backend)
+  - [Folder structure](https://github.com/brianwachira/Survey-Web-App#folder-structure-1)
+- [Support and contact details](https://github.com/brianwachira/Survey-Web-App#support-and-contact-details)
 ## Description
 - This is a test to build the backend API, web portal and client site for a survey web app
 
