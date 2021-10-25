@@ -5,7 +5,16 @@
 ## Table Of Contents
 - [Description](https://github.com/brianwachira/Survey-Web-App#description)
 - [Demo Links](https://github.com/brianwachira/Survey-Web-App#live-demo)
-- [Prerequisites](https://github.com/brianwachira/Survey-Web-App#prerequites)
+- [Setting Up](https://github.com/brianwachira/Survey-Web-App#setting-up)
+  - [Prerequisites](https://github.com/brianwachira/Survey-Web-App#prerequites)
+    - [Backend](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#setting-up)
+    - [Frontend](https://github.com/brianwachira/Survey-Web-App#frontend)
+      - [portal](https://github.com/brianwachira/Survey-Web-App#portal)
+        - [install]()
+        - [usage]()
+      - [client](https://github.com/brianwachira/Survey-Web-App#client)
+        - [install]()
+        - [usage]()
 - [Backend API](https://github.com/brianwachira/Survey-Web-App#backend-api)
   - [Example Endpoints](https://github.com/brianwachira/Survey-Web-App#example-endpoints)
 - [Technologies used (frontend)](https://github.com/brianwachira/Survey-Web-App#technologies-used-frontend)
@@ -25,10 +34,33 @@ password:admin
 ```
 [CLIENT SITE](https://survey-app25.herokuapp.com/)
 
-## Prerequites
+## Setting up
+
+### Prerequites
 - NodeJS required
 - NPM 
 - ReactJS
+  
+#### Backend
+- Find instructions [here](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#setting-up)
+#### Frontend
+##### Portal
+###### Install
+- Ensure your backend instance is up and running
+- Navigate to the portal folder ```cd  admin/portal```
+- Run ``` npm install``` . This will install all the dependencies needed for the project
+###### Usage
+- Navigate to the frontend folder ```cd admin/portal```
+- Run ```npm start``` . This will initialize the portal
+- 
+##### Survey Web App Client
+###### Install
+- Ensure your backend instance is up and running
+- Navigate to the portal folder ```cd  client```
+- Run ``` npm install``` . This will install all the dependencies needed for the project
+###### Usage
+- Navigate to the frontend folder ```cd client```
+- Run ```npm start``` . This will initialize the portal
 
 ## Backend API
 ## Example Endpoints
