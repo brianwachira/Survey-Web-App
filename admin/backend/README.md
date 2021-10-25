@@ -189,32 +189,6 @@ Authorization:  bearer eyJhbIUzI1NifIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud
                     "value": "circles"
                 }
             ]
-        },
-        {
-            "passage": "Black or white?",
-            "options":[
-                {
-                    "choice": "A",
-                    "value": "Black"
-                },
-                {
-                    "choice": "B",
-                    "value": "White"
-                }
-            ]
-        },
-        {
-            "passage": "BMW or Mercedes?",
-            "options":[
-                {
-                    "choice": "A",
-                    "value": "BMW"
-                },
-                {
-                    "choice": "B",
-                    "value": "Mercedes"
-                }
-            ]
         }
     ]
 
@@ -355,42 +329,6 @@ GET http://localhost:3002/api/survey/all
         ],
         "survey": "6171d9f6356db0b69915f55f",
         "__v": 0
-      },
-      {
-        "_id": "6171d9f6356db0b69915f569",
-        "passage": "What would you like it to go with?",
-        "options": [
-          {
-            "choice": "A",
-            "value": "Rice",
-            "_id": "6171d9f6356db0b69915f56a"
-          },
-          {
-            "choice": "B",
-            "value": "Chapati",
-            "_id": "6171d9f6356db0b69915f56b"
-          }
-        ],
-        "survey": "6171d9f6356db0b69915f55f",
-        "__v": 0
-      },
-      {
-        "_id": "6171d9f6356db0b69915f56c",
-        "passage": "Soft drink?",
-        "options": [
-          {
-            "choice": "A",
-            "value": "Martinis",
-            "_id": "6171d9f6356db0b69915f56d"
-          },
-          {
-            "choice": "B",
-            "value": "Water",
-            "_id": "6171d9f6356db0b69915f56e"
-          }
-        ],
-        "survey": "6171d9f6356db0b69915f55f",
-        "__v": 0
       }
     ]
   },
@@ -452,42 +390,6 @@ Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6OQK0
             "choice": "B",
             "value": "Chicken",
             "_id": "6171d9f6356db0b69915f568"
-          }
-        ],
-        "survey": "6171d9f6356db0b69915f55f",
-        "__v": 0
-      },
-      {
-        "_id": "6171d9f6356db0b69915f569",
-        "passage": "What would you like it to go with?",
-        "options": [
-          {
-            "choice": "A",
-            "value": "Rice",
-            "_id": "6171d9f6356db0b69915f56a"
-          },
-          {
-            "choice": "B",
-            "value": "Chapati",
-            "_id": "6171d9f6356db0b69915f56b"
-          }
-        ],
-        "survey": "6171d9f6356db0b69915f55f",
-        "__v": 0
-      },
-      {
-        "_id": "6171d9f6356db0b69915f56c",
-        "passage": "Soft drink?",
-        "options": [
-          {
-            "choice": "A",
-            "value": "Martinis",
-            "_id": "6171d9f6356db0b69915f56d"
-          },
-          {
-            "choice": "B",
-            "value": "Water",
-            "_id": "6171d9f6356db0b69915f56e"
           }
         ],
         "survey": "6171d9f6356db0b69915f55f",
@@ -557,42 +459,6 @@ Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6OQK0
         ],
         "survey": "6171d9f6356db0b69915f55f",
         "__v": 0
-      },
-      {
-        "_id": "6171d9f6356db0b69915f569",
-        "passage": "What would you like it to go with?",
-        "options": [
-          {
-            "choice": "A",
-            "value": "Rice",
-            "_id": "6171d9f6356db0b69915f56a"
-          },
-          {
-            "choice": "B",
-            "value": "Chapati",
-            "_id": "6171d9f6356db0b69915f56b"
-          }
-        ],
-        "survey": "6171d9f6356db0b69915f55f",
-        "__v": 0
-      },
-      {
-        "_id": "6171d9f6356db0b69915f56c",
-        "passage": "Soft drink?",
-        "options": [
-          {
-            "choice": "A",
-            "value": "Martinis",
-            "_id": "6171d9f6356db0b69915f56d"
-          },
-          {
-            "choice": "B",
-            "value": "Water",
-            "_id": "6171d9f6356db0b69915f56e"
-          }
-        ],
-        "survey": "6171d9f6356db0b69915f55f",
-        "__v": 0
       }
     ]
   },
@@ -650,42 +516,6 @@ Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6OQK0
             "choice": "B",
             "value": "Chicken",
             "_id": "6171d9f6356db0b69915f568"
-          }
-        ],
-        "survey": "6171d9f6356db0b69915f55f",
-        "__v": 0
-      },
-      {
-        "_id": "6171d9f6356db0b69915f569",
-        "passage": "What would you like it to go with?",
-        "options": [
-          {
-            "choice": "A",
-            "value": "Rice",
-            "_id": "6171d9f6356db0b69915f56a"
-          },
-          {
-            "choice": "B",
-            "value": "Chapati",
-            "_id": "6171d9f6356db0b69915f56b"
-          }
-        ],
-        "survey": "6171d9f6356db0b69915f55f",
-        "__v": 0
-      },
-      {
-        "_id": "6171d9f6356db0b69915f56c",
-        "passage": "Soft drink?",
-        "options": [
-          {
-            "choice": "A",
-            "value": "Martinis",
-            "_id": "6171d9f6356db0b69915f56d"
-          },
-          {
-            "choice": "B",
-            "value": "Water",
-            "_id": "6171d9f6356db0b69915f56e"
           }
         ],
         "survey": "6171d9f6356db0b69915f55f",
@@ -986,105 +816,6 @@ Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJy
         "_id": "61758e693db914830fe5b5af"
       }
     ]
-  },
-  {
-    "submission": {
-      "_id": "61758ee63db914830fe5b5b1",
-      "firstname": "Ryan",
-      "lastname": "John",
-      "email": "erenyaegar@aot.rumblin",
-      "phone": "0738942048",
-      "survey": "6171d9f6356db0b69915f55f",
-      "__v": 0
-    },
-    "response": [
-      {
-        "question": "6171d9f6356db0b69915f563",
-        "choice": "B",
-        "_id": "61758ee63db914830fe5b5b5"
-      },
-      {
-        "question": "6171d9f6356db0b69915f566",
-        "choice": "A",
-        "_id": "61758ee63db914830fe5b5b6"
-      },
-      {
-        "question": "6171d9f6356db0b69915f569",
-        "choice": "B",
-        "_id": "61758ee63db914830fe5b5b7"
-      },
-      {
-        "question": "6171d9f6356db0b69915f56c",
-        "choice": "A",
-        "_id": "61758ee63db914830fe5b5b8"
-      }
-    ]
-  },
-  {
-    "submission": {
-      "_id": "617651087977d3b4e6c9f4d6",
-      "firstname": "boruto",
-      "lastname": "John",
-      "email": "b@s.com",
-      "phone": "0783975920",
-      "survey": "6171d9f6356db0b69915f55f",
-      "__v": 0
-    },
-    "response": [
-      {
-        "question": "6171d9f6356db0b69915f563",
-        "choice": "B",
-        "_id": "617651087977d3b4e6c9f4da"
-      },
-      {
-        "question": "6171d9f6356db0b69915f566",
-        "choice": "A",
-        "_id": "617651087977d3b4e6c9f4db"
-      },
-      {
-        "question": "6171d9f6356db0b69915f569",
-        "choice": "B",
-        "_id": "617651087977d3b4e6c9f4dc"
-      },
-      {
-        "question": "6171d9f6356db0b69915f56c",
-        "choice": "A",
-        "_id": "617651087977d3b4e6c9f4dd"
-      }
-    ]
-  },
-  {
-    "submission": {
-      "_id": "617677e32961596b393fff03",
-      "firstname": "random",
-      "lastname": "guyy",
-      "email": "randomguyy@gmail.com",
-      "phone": "0707234562",
-      "survey": "6171d9f6356db0b69915f55f",
-      "__v": 0
-    },
-    "response": [
-      {
-        "question": "6171d9f6356db0b69915f563",
-        "choice": "A",
-        "_id": "617677e32961596b393fff07"
-      },
-      {
-        "question": "6171d9f6356db0b69915f566",
-        "choice": "B",
-        "_id": "617677e32961596b393fff08"
-      },
-      {
-        "question": "6171d9f6356db0b69915f569",
-        "choice": "A",
-        "_id": "617677e32961596b393fff09"
-      },
-      {
-        "question": "6171d9f6356db0b69915f56c",
-        "choice": "A",
-        "_id": "617677e32961596b393fff0a"
-      }
-    ]
   }
 ]
 ```
@@ -1211,46 +942,6 @@ Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmmJyaWFud2F
         "choice": "B",
         "_id": "61729f8237eee5aa283da87b"
       },
-      {
-        "question": {
-          "_id": "6171d9f6356db0b69915f569",
-          "passage": "What would you like it to go with?",
-          "options": [
-            {
-              "choice": "A",
-              "value": "Rice",
-              "_id": "6171d9f6356db0b69915f56a"
-            },
-            {
-              "choice": "B",
-              "value": "Chapati",
-              "_id": "6171d9f6356db0b69915f56b"
-            }
-          ]
-        },
-        "choice": "A",
-        "_id": "61729f8237eee5aa283da87c"
-      },
-      {
-        "question": {
-          "_id": "6171d9f6356db0b69915f56c",
-          "passage": "Soft drink?",
-          "options": [
-            {
-              "choice": "A",
-              "value": "Martinis",
-              "_id": "6171d9f6356db0b69915f56d"
-            },
-            {
-              "choice": "B",
-              "value": "Water",
-              "_id": "6171d9f6356db0b69915f56e"
-            }
-          ]
-        },
-        "choice": "A",
-        "_id": "61729f8237eee5aa283da87d"
-      }
     ],
     "__v": 0
   },
