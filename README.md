@@ -2,13 +2,42 @@
 #### By [Brian Wachira](https://www.github.com/brianwachira)
 
 ## Description
-
+- This is a test to build the backend API, web portal and client site for a survey web app
 
 ## Prerequites
 - NodeJS required
 - NPM 
 - ReactJS
 
+## Backend API
+## Example Endpoints
+### login
+```
+POST /login
+```
+#### Example
+```
+POST http://localhost:3002/api/login 
+Content-Type: application/json
+
+{
+    "username": "admin@admin.com", "password": "admin123"
+
+}
+```
+### response
+```
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCIfIkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIjoiNjE3MTZmOGExOWY2ZmQwfTcxYzY3MzExIiwiaWF0IjoxNjM1MTUzNDUxfQ.5jbe5DTlPihkULocV7wVGZiTP4zMYwTDWNhTBz7A8Qc",
+  "username": "admin@admin.com",
+  "id": "61716f8a19f6fd0e71c67311"
+}
+```
+
+### create survey
+```
+POST /survey
+```
 ## Technologies used (frontend)
  - <b>ReactJS (Create React App) </b> : Allows one to Create React apps with no build configuration. [https://create-react-app.dev/](https://create-react-app.dev/)
  - <b>axios</b> : Promise based HTTP client for the browser and node.js [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
@@ -16,7 +45,9 @@
  - <b>react-redux</b> :  library for managing application state. [https://react-redux.js.org/](https://react-redux.js.org/)
  - <b>redux-thunk</b> : Thunk middleware for Redux. Used for running redux asynchronously [https://github.com/reduxjs/redux-thunk](https://github.com/reduxjs/redux-thunk)
  - <b>react-router-dom</b> : A routing library for reactjs [https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start)
- - <b>formik</b> : Build Forms without tears 
+ - <b>formik</b> : Build Forms without the tears [https://formik.org/](https://formik.org/)
+ - <b>yup</b> : It is a Javascript builder for value parsing and validation [https://github.com/jquense/yup](https://github.com/jquense/yup)
+
 
 ## Technologies used
  - <b>Express</b> : NodeJS-based framework for buidling API'S [https://expressjs.com/ ](https://expressjs.com/)
