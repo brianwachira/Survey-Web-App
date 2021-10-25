@@ -8,6 +8,8 @@
 [BACKEND PORTAL](https://secret-plateau-48735.herokuapp.com/)<br/>
 [CLIENT SITE](https://survey-app25.herokuapp.com/)
 
+## Table Of Contents
+[Example Endpoints](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#example-endpoints)
 
 ## Example Endpoints
 ### create survey
