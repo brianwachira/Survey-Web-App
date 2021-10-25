@@ -5,6 +5,7 @@
 - [Description](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#description)
 - [Demo Links](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#live-demo)
 - [Example Endpoints](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#example-endpoints)
+  - [Login](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#login)
   - [Create Survey](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-survey)
   - [Create Submission (fill survey)](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-submission--fill-survey-)
   - [Get submission by survey id](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#get-submissions-by-survey-id)
@@ -18,6 +19,28 @@
 
 
 ## Example Endpoints
+### login
+```
+POST /login
+```
+#### Example
+```
+POST http://localhost:3002/api/auth 
+Content-Type: application/json
+
+{
+    "username": "admin@admin.com", "password": "admin123"
+
+}
+```
+#### response
+```
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCIfIkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIjoiNjE3MTZmOGExOWY2ZmQwfTcxYzY3MzExIiwiaWF0IjoxNjM1MTUzNDUxfQ.5jbe5DTlPihkULocV7wVGZiTP4zMYwTDWNhTBz7A8Qc",
+  "username": "admin@admin.com",
+  "id": "61716f8a19f6fd0e71c67311"
+}
+```
 ### create survey
 ```
 POST /survey
