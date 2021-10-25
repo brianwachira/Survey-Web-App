@@ -38,6 +38,230 @@ Content-Type: application/json
 ```
 POST /survey
 ```
+### Example
+```
+POST http://localhost:3002/api/survey
+content-type: application/json
+Authorization:  bearer eyJhbIUzI1NifIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIjoiNjE3MTZmOGExOWY2ZmQwZTcxYzY3MzExIiwiaWF0IjoxNjM0ODMzNzA3fQ.3Utuus-GC56OQK0fCoxcQK08PE7qG78Xxf5QJ2i8wk1g
+
+{
+    "admin":"61716f8a19f6fd0e71c67311",
+    "title": "Another  Survey",
+    "questions": [
+        {
+            "passage": "What do you dislike?",
+            "options":[
+                {
+                    "choice": "A",
+                    "value": "Waking up early"
+                },
+                {
+                    "choice": "B",
+                    "value": "Sleeping late"
+                }
+            ]
+        },
+        {
+            "passage": "Squares or circles?",
+            "options":[
+                {
+                    "choice": "A",
+                    "value": "square"
+                },
+                {
+                    "choice": "B",
+                    "value": "circles"
+                }
+            ]
+        },
+        {
+            "passage": "Black or white?",
+            "options":[
+                {
+                    "choice": "A",
+                    "value": "Black"
+                },
+                {
+                    "choice": "B",
+                    "value": "White"
+                }
+            ]
+        },
+        {
+            "passage": "BMW or Mercedes?",
+            "options":[
+                {
+                    "choice": "A",
+                    "value": "BMW"
+                },
+                {
+                    "choice": "B",
+                    "value": "Mercedes"
+                }
+            ]
+        }
+    ]
+
+}
+```
+### response
+```
+{
+  "title": "urvey for readme demo",
+  "questions": [
+    {
+      "passage": "What do you dislike?",
+      "options": [
+        {
+          "choice": "A",
+          "value": "Waking up early",
+          "_id": "617677182961596b393ffef7"
+        },
+        {
+          "choice": "B",
+          "value": "Sleeping late",
+          "_id": "617677182961596b393ffef8"
+        }
+      ],
+      "survey": "617677172961596b393ffef2",
+      "_id": "617677182961596b393ffef6",
+      "__v": 0
+    },
+    {
+      "passage": "Squares or circles?",
+      "options": [
+        {
+          "choice": "A",
+          "value": "square",
+          "_id": "617677182961596b393ffefa"
+        },
+        {
+          "choice": "B",
+          "value": "circles",
+          "_id": "617677182961596b393ffefb"
+        }
+      ],
+      "survey": "617677172961596b393ffef2",
+      "_id": "617677182961596b393ffef9",
+      "__v": 0
+    },
+    {
+      "passage": "Black or white?",
+      "options": [
+        {
+          "choice": "A",
+          "value": "Black",
+          "_id": "617677182961596b393ffefd"
+        },
+        {
+          "choice": "B",
+          "value": "White",
+          "_id": "617677182961596b393ffefe"
+        }
+      ],
+      "survey": "617677172961596b393ffef2",
+      "_id": "617677182961596b393ffefc",
+      "__v": 0
+    },
+    {
+      "passage": "BMW or Mercedes?",
+      "options": [
+        {
+          "choice": "A",
+          "value": "BMW",
+          "_id": "617677182961596b393fff00"
+        },
+        {
+          "choice": "B",
+          "value": "Mercedes",
+          "_id": "617677182961596b393fff01"
+        }
+      ],
+      "survey": "617677172961596b393ffef2",
+      "_id": "617677182961596b393ffeff",
+      "__v": 0
+    }
+  ]
+}
+```
+### create submission ( fill survey )
+```
+POST /submissions
+```
+#### Example
+```
+POST http://localhost:3002/api/submissions
+content-type: application/json
+Authorization:  bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaWFud2FjaGlyYSIsImlkIjoidjE3MTZmOGExOWY2ZmQwZTcxYzY3MzExIiwiaWF0IjoxNjM0ODMzNzA3fQ.3Utuus-GC56OQK0CoxcQK08PE7qG7sdXxf5QJ2i8wk1g
+
+{
+"firstName" : "random",
+"lastName" : "guyy",
+"email" : "randomguyy@gmail.com",
+"phone" : "0707234562",
+"surveyId": "6171d9f6356db0b69915f55f",
+"response": [
+        {
+            "question": "6171d9f6356db0b69915f563",
+            "choice": "A"
+        },
+        {
+            "question": "6171d9f6356db0b69915f566",
+            "choice": "B"
+        },
+        {
+            "question": "6171d9f6356db0b69915f569",
+            "choice": "A"
+        },
+        {
+            "question": "6171d9f6356db0b69915f56c",
+            "choice": "A"
+        }
+    ]
+}
+```
+#### response
+```
+{
+  "savedSubmission": {
+    "firstname": "random",
+    "lastname": "guyy",
+    "email": "randomguyy@gmail.com",
+    "phone": "0707234562",
+    "survey": "6171d9f6356db0b69915f55f",
+    "_id": "617677e32961596b393fff03",
+    "__v": 0
+  },
+  "savedResponse": {
+    "submission": "617677e32961596b393fff03",
+    "response": [
+      {
+        "question": "6171d9f6356db0b69915f563",
+        "choice": "A",
+        "_id": "617677e32961596b393fff07"
+      },
+      {
+        "question": "6171d9f6356db0b69915f566",
+        "choice": "B",
+        "_id": "617677e32961596b393fff08"
+      },
+      {
+        "question": "6171d9f6356db0b69915f569",
+        "choice": "A",
+        "_id": "617677e32961596b393fff09"
+      },
+      {
+        "question": "6171d9f6356db0b69915f56c",
+        "choice": "A",
+        "_id": "617677e32961596b393fff0a"
+      }
+    ],
+    "_id": "617677e32961596b393fff06",
+    "__v": 0
+  }
+}
+```
+
 ## Technologies used (frontend)
  - <b>ReactJS (Create React App) </b> : Allows one to Create React apps with no build configuration. [https://create-react-app.dev/](https://create-react-app.dev/)
  - <b>axios</b> : Promise based HTTP client for the browser and node.js [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
