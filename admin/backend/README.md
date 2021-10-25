@@ -5,6 +5,8 @@
 - [Description](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#description)
   - [Setting up](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#prerequisites)
   - [Setup](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#setup)
+  - [Install](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#install)
+  - [Usage](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#usage)
 - [Setting up](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#setting-up)
 - [Demo Links](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#live-demo)
 - [Example Endpoints](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#example-endpoints)
@@ -89,7 +91,13 @@ These will be used for your application to connect to the database.
 - Replace ``` MONGODB_URL ``` with the address you got from mongoDB cloud atlas
 - Replace ``` SECRET_NUMBER ``` with an integer eg *10* . This will be used when generating a JWT token
 
+### Install
+- Navigate to the backend folder ```cd  backend```
+- Run ``` npm install``` . This will install all the dependencies needed for the project dependencies needed for the project
 
+### Usage
+- Navigate to the backend folder ```cd  backend```
+- Run ``` npm run dev``` . This will initialize the backend
 ## Example Endpoints
 ### login
 ```
