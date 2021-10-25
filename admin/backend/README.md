@@ -21,7 +21,7 @@
 ## Example Endpoints
 ### login
 ```
-POST /login
+POST /auth
 ```
 #### Example
 ```
