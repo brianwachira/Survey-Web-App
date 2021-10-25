@@ -141,10 +141,10 @@ submissionsRouter.get('/survey/:id', async (request, response) => {
 	//fetch Questions and create an array with response info and questions
 	const submissionWithResponses = await Promise.all(
 		submissons.map( async submission => {
-			let response = await Responses.find({ submission : submission._id }).populate('response.question',{ id:1, passage:1, options: 1 });
+			let response = await Responses.find({ submission : submission._id });
 			return {
 				submission,
-				response
+				response: response[0].response
 			};
 		})
 	);

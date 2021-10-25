@@ -4,9 +4,9 @@ import { Link, NavLink } from 'react-router-dom'
 import './InnerBar.scss'
 const InnerBar = (props) => {
 
-	const { title,items, fetchItem,children } = props
+	const { title, items, fetchItem, children } = props
 
-	if(!items) {
+	if (!items) {
 		return (
 			<>loading!!</>
 		)
@@ -14,7 +14,7 @@ const InnerBar = (props) => {
 	//console.log(items)
 	return (
 		<>
-			<div className="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
+			<div className="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white vh-100">
 				<NavLink to="/analytics" className="d-flex align-items-start pb-sm-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 					<small>{title}</small>
 				</NavLink>
@@ -30,14 +30,15 @@ const InnerBar = (props) => {
 										<div className="d-flex justify-content-between">
 											{children}
 											<button className="btn-style-none" onClick={() => fetchItem(item?.survey?._id)}>
-												<p className="mb-0"><small>{item?.survey?.title}</small></p>
+												<p className="mb-0">{item?.survey?.title}</p>
+												<p><small>By {item?.survey?.admin?.username}</small></p>
 											</button>
 											<button type="button" className="btn-style-none dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
 												<i className="fa fa-ellipsis-v text-right" aria-hidden="true"></i>
 											</button>
 											<ul className="dropdown-menu">
-												<li><Link className="dropdown-item" to="/comingsoon">View More</Link></li>
-												<li><Link className="dropdown-item" to="/comingsoon">Delete Survey</Link></li>
+												<li><Link className="dropdown-item disabled" to="/comingsoon">View More</Link></li>
+												<li><Link className="dropdown-item disabled" to="/comingsoon">Delete Survey</Link></li>
 											</ul>
 										</div>
 									</Link>
