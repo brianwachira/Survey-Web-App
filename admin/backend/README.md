@@ -3,12 +3,12 @@
 
 ## Table Of Contents
 - [Description](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#description)
+- [Demo Links](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#live-demo)
 - [Setting up](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#setting-up)
   - [Prerequisites](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#prerequisites)
   - [Setup](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#setup)
   - [Install](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#install)
   - [Usage](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#usage)
-- [Demo Links](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#live-demo)
 - [Example Endpoints](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#example-endpoints)
   - [Login](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#login)
   - [Create Survey](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#create-survey)
