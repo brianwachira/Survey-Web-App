@@ -7,7 +7,11 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-ui": "rm -rf build && cd ../portal/ && yarn build --prod && cp -r build ../backend",
+    "deploy": "git push heroku master",
+    "deploy-full":"npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "heroku logs --tail"
   },
   "author": "brianwachria",
   "license": "MIT",

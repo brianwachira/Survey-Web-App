@@ -1,6 +1,6 @@
 import { Formik } from 'formik'
 import React from 'react'
-import LoginForm from '../../../components/LogInForm'
+import AuthForm from '../../../components/AuthForm'
 import * as Yup from 'yup'
 import loginService from '../../../services/login'
 import { useDispatch } from 'react-redux'
@@ -67,7 +67,7 @@ const Login = () => {
 				initialValues={initialValues}
 				onSubmit={onSubmit}
 				validationSchema={validationSchema}>
-				{({ handleSubmit }) => <LoginForm onSubmit={handleSubmit}/>}
+				{({ handleSubmit }) => <AuthForm onSubmit={handleSubmit}/>}
 			</Formik>
 		</>
 	)

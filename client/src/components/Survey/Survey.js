@@ -89,7 +89,7 @@ const Survey = () => {
 				<main className="col-md-12">
 
 					<h2 className={'text-primary text-center my-5 mb-2'}>Survey Details</h2>
-					<p className={'text-center'}>{surveys.survey.questions.length} questions</p>
+					<p className={'text-center'}><span className="badge bg-primary rounded-pill">{surveys.survey.questions.length}</span> questions</p>
 					<div className="d-flex justify-content-center">
 						<SurveyForm questions={surveys.survey.questions} handleSubmit={handleSubmit} />
 					</div>

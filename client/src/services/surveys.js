@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = '/api/survey'
+const baseUrl = 'https://secret-plateau-48735.herokuapp.com/api/survey'
 
 const getAll = async () => {
 	const newUrl = `${baseUrl}/all`
@@ -13,7 +13,7 @@ const getBy = async (id) => {
 }
 
 const submit = async (newResponse) => {
-	const submissionsUrl = '/api/submissions'
+	const submissionsUrl = 'https://secret-plateau-48735.herokuapp.com/api/submissions'
 	const response = await axios.post(submissionsUrl,newResponse)
 
 	return response.data

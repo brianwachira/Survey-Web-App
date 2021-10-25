@@ -2,7 +2,8 @@ import surveyService from '../services/surveys'
 const initialState = {
 	surveys: [],
 	survey: {},
-	submitted:[]
+	submitted:[],
+	filteredSurveys: [],
 }
 const surveyReducer = (state =initialState, action) => {
 	switch (action.type) {
@@ -21,6 +22,11 @@ const surveyReducer = (state =initialState, action) => {
 			...state,
 			submitted: [...state.submitted, action.data]
 
+		}
+	case 'FILTER_SURVEYS':
+		return {
+			...state,
+			filteredSurveys: state.surveys.filter(survey => survey?.survey?.title.toLowerCase().includes(action.data.toLowerCase()))
 		}
 	default:
 		return state
@@ -57,6 +63,15 @@ export const submitResponse = response => {
 		dispatch({
 			type: 'SUBMIT_RESPONSE',
 			data: submittedResponse
+		})
+	}
+}
+
+export const filterSurveys = ( title ) => {
+	return dispatch => {
+		dispatch({
+			type:'FILTER_SURVEYS',
+			data: title
 		})
 	}
 }

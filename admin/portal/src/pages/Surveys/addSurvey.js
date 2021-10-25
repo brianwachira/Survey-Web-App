@@ -46,7 +46,7 @@ const AddSurvey = () => {
 			dispatch(setNotification(successNotification))
 			//unset notification upon success
 			setTimeout(() => {
-				dispatch(setNotification({ ...successNotification,title:'', message: '' }))
+				dispatch(setNotification({ ...successNotification, title: '', message: '' }))
 			}, 2000)
 			//refresh page
 			setTimeout(() => {
@@ -64,23 +64,25 @@ const AddSurvey = () => {
 			dispatch(setNotification(failedNotification))
 			// //unset notification upon success
 			setTimeout(() => {
-				dispatch(setNotification({ ...failedNotification,title:'', message: '' }))
+				dispatch(setNotification({ ...failedNotification, title: '', message: '' }))
 			}, 2000)
 
 		}
 	}
-	return(
+	return (
 		<>
 			<Layout>
 				<div className="container-fluid px-5">
-					<h2 className="py-4">Add Survey</h2>
 					<div className="row">
 						<div className="col d-flex px-sm-4 px-0 flex-column h-sm-100">
 							<main className="row mb-3">
 								<div className="col">
-									<Card title="Add Survey Form">
-										<CreateSurveyForm handleSubmit={handleSubmit}/>
-									</Card>
+									<div style={{ maxWidth: '900px', margin: '0 auto' }}>
+										<h2 className="py-4 text-center">Add Survey</h2>
+										<Card title="Add Survey Form">
+											<CreateSurveyForm handleSubmit={handleSubmit} />
+										</Card>
+									</div>
 								</div>
 							</main>
 						</div>

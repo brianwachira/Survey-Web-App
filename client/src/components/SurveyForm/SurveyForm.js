@@ -2,7 +2,7 @@
 import React from 'react'
 import { Formik, Field, Form, FieldArray, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-const SurveyForm = ({ questions,handleSubmit }) => {
+const SurveyForm = ({ questions, handleSubmit }) => {
 	//,
 
 	const initialValues = {
@@ -55,26 +55,32 @@ const SurveyForm = ({ questions,handleSubmit }) => {
 									{values.response.length > 0 &&
 										values.response.map((respon, index) => (
 											<div className="mb-5" key={index}>
-												<div className="row g-3 align-items-center mb-3">
-													<span className="mb-2">Question {index + 1}: {questions[index] ? questions[index]?.passage : ''}</span>
-													<div className="row w-50">
-														{questions[index] && questions[index].options.map(option =>
-															<div className="form-check col" key={option._id}>
-																<Field
-																	name={`response.${index}.choice`}
-																	type="radio"
-																	value={option.choice}
-																	className="form-check-input"
-																	required />
-																<label htmlFor={`response.${index}.choice`} className="form-check-label">{option.value}</label>
-															</div>
+												<div className="row g-3 align-items-center mb-1">
+													<div className="card px-0">
+														<div className="card-header">
+															<span className="mb-2">Question {index + 1}: {questions[index] ? questions[index]?.passage : ''}</span>
+														</div>
+														<div className="card-body mx-3">
+															<div className="row w-75">
+																{questions[index] && questions[index].options.map(option =>
+																	<div className="form-check col" key={option._id}>
+																		<Field
+																			name={`response.${index}.choice`}
+																			type="radio"
+																			value={option.choice}
+																			className="form-check-input"
+																			required />
+																		<label htmlFor={`response.${index}.choice`} className="form-check-label">{option.value}</label>
+																	</div>
 
-														)}
+																)}
+															</div>
+															<ErrorMessage
+																name={`response.${index}.choice`}
+																component='span'
+																className='text-danger' />
+														</div>
 													</div>
-													<ErrorMessage
-														name={`response.${index}.choice`}
-														component='span'
-														className='text-danger' />
 												</div>
 											</div>
 										))}

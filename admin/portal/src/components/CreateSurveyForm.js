@@ -164,11 +164,11 @@ const CreateSurveyForm = ({ handleSubmit }) => {
                                         		{index + 1 > 5 && <Button label="Discard" className="btn btn-danger mb-3" onClick={() => remove(index)} />}
                                         	</div>
                                         ))}
-									<Button label="Add another question" className="btn btn-success mb-3" onClick={() => push({ question: '', optionA: '', optionB: '' })} />
+									<Button label="Add another question" className="btn btn-outline-success mb-3" onClick={() => push({ question: '', optionA: '', optionB: '' })} />
 								</div>
 							)}
 						</FieldArray>
-						<Button type="submit" label="Submit" className="btn btn-primary" />
+						<Button type="submit" label="Submit" className="btn btn-dark w-100" />
 					</Form>
 				)}
 
