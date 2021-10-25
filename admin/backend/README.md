@@ -3,6 +3,9 @@
 
 ## Table Of Contents
 - [Description](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#description)
+  - [Setting up](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#prerequisites)
+  - [Setup](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#setup)
+- [Setting up](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#setting-up)
 - [Demo Links](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#live-demo)
 - [Example Endpoints](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#example-endpoints)
   - [Login](https://github.com/brianwachira/Survey-Web-App/tree/main/admin/backend#login)
@@ -20,6 +23,71 @@ username: admin
 password:admin
 ```
 [CLIENT SITE](https://survey-app25.herokuapp.com/) 
+
+## Setting up
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+- NodeJS required
+### Setup
+- Clone the Repository
+- Go to https://www.mongodb.com/cloud/atlas
+- Create  new cluster
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster1.png" alt="cluster 1"></a>
+<br/>
+
+- Choose AWS provider and any free-tier data center
+<br/>
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster2.png" alt="cluster 1"></a>
+<br/>  
+
+- use the database access tab for creating user credentials for the database. 
+Please note that these are not the same credentials you use for logging into MongoDB Atlas. 
+These will be used for your application to connect to the database.
+<br/>
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster3.png" alt="cluster 1"></a>
+<br/>
+
+- grant the user with permissions to read and write to the databases.
+<br/>
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster5.png" alt="cluster 1"></a>    
+<br/>
+
+- Define the IP addresses that are allowed access to the database.
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster6.png" alt="cluster 1"></a> 
+<br/>
+
+- For the sake of simplicity we will allow access from all IP addresses: 
+<br/>
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster7.png" alt="cluster 1"></a> 
+<br/>
+
+- Finally we are ready to connect to our database. Start by clicking connect:
+<br/>
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster8.png" alt="cluster 1"></a> 
+<br/>
+
+- Choose ```  Connect your application:``` 
+<br/>
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster9.png" alt="cluster 1"></a> 
+<br/>The view displays the MongoDB URI, which is the address of the database that we will supply to the MongoDB client library we will add to our application.
+<br/><a href="https://www.mongodb.com/cloud/atlas" target="_blank"><img src="https://github.com/brianwachira/rides-backend/blob/main/assets/cluster10.png" alt="cluster 1"></a> 
+<br/>The address looks like this:
+```mongodb+srv://<USERNAME>:<PASSWORD>@cluster0-ostce.mongodb.net/<DB-NAME><DB_NAME>?retryWrites=true```
+
+- Copy the Address
+- Create a .env file in the root of your the backend folder.
+- Use the following syntax to save mongoDB URI as shown in env.example
+    ``` 
+    MONGODB_URI=MONGODB_URL
+    PORT=3001
+    SECRET=SECRET_NUMBER
+    JWT_SECRET=SECRET_STRING
+
+    ```
+- Replace ``` MONGODB_URL ``` with the address you got from mongoDB cloud atlas
+- Replace ``` SECRET_NUMBER ``` with an integer eg *10* . This will be used when generating a JWT token
 
 
 ## Example Endpoints
